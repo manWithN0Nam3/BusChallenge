@@ -15,6 +15,7 @@
 		975549181B1647C0008E4863 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 975549161B1647C0008E4863 /* LaunchScreen.xib */; };
 		975549241B1647C1008E4863 /* BusChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 975549231B1647C1008E4863 /* BusChallengeTests.m */; };
 		9755492E1B1647E2008E4863 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9755492D1B1647E2008E4863 /* MapKit.framework */; };
+		975549311B166083008E4863 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 975549301B166083008E4863 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		975549221B1647C1008E4863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		975549231B1647C1008E4863 /* BusChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusChallengeTests.m; sourceTree = "<group>"; };
 		9755492D1B1647E2008E4863 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9755492F1B166083008E4863 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		975549301B166083008E4863 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				9755490E1B1647C0008E4863 /* ViewController.h */,
 				9755490F1B1647C0008E4863 /* ViewController.m */,
 				975549111B1647C0008E4863 /* Main.storyboard */,
+				9755492F1B166083008E4863 /* DetailViewController.h */,
+				975549301B166083008E4863 /* DetailViewController.m */,
 				975549141B1647C0008E4863 /* Images.xcassets */,
 				975549161B1647C0008E4863 /* LaunchScreen.xib */,
 				975549071B1647C0008E4863 /* Supporting Files */,
@@ -226,6 +231,7 @@
 				975549101B1647C0008E4863 /* ViewController.m in Sources */,
 				9755490D1B1647C0008E4863 /* AppDelegate.m in Sources */,
 				9755490A1B1647C0008E4863 /* main.m in Sources */,
+				975549311B166083008E4863 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

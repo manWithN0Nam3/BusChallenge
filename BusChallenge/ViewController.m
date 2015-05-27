@@ -8,10 +8,12 @@
 
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
+#import "DetailViewController.h"
 
 @interface ViewController ()<MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property NSObject <MKAnnotation> *busStopAnnotation;
+@property NSArray *busStops;
 
 @end
 
@@ -48,33 +50,55 @@
         //original layer
         NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&connectionError];
         //first layer - array
-        NSArray *busStops = [JSON objectForKey:@"row"];
+        self.busStops = [JSON objectForKey:@"row"];
 
-        for (NSDictionary *location in busStops) {
+        for (NSDictionary *location in self.busStops) {
             MKPointAnnotation *annotation = [MKPointAnnotation new];
             annotation.coordinate = CLLocationCoordinate2DMake([[location objectForKey:@"latitude"]floatValue], [[location objectForKey:@"longitude"]floatValue]);
+
             annotation.title = [location objectForKey:@"cta_stop_name"];
             annotation.subtitle = [location objectForKey:@"routes"];
+
 
 
             [self.mapView addAnnotation:annotation];
 
         }
-        NSLog(@"%lu",busStops.count);
+        NSLog(@"%lu",self.busStops.count);
         
     }];
 }
 
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
+
+        MKPinAnnotationView *pin = [[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:nil];
+        pin.canShowCallout = YES;
+        pin.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+
+    return pin;
+}
+
+
 //
-//-(NSArray *)mapViewAtIndexes:(NSIndexSet *)indexes{
-//
-////    NSDictionary *dictionary = [self.buses objectAtIndex:indexes.lastIndex];
-////
 //
 //
-//
-//
-//
-//}
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+    [self performSegueWithIdentifier:@"c" sender:control];
+
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    DetailViewController *dVc = segue.destinationViewController;
+
+    dVc.dictionary = self.busStops;
+
+
+
+}
+
+
+
+
+
 
 @end
