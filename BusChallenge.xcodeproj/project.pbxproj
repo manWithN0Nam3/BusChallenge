@@ -14,6 +14,7 @@
 		975549151B1647C0008E4863 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 975549141B1647C0008E4863 /* Images.xcassets */; };
 		975549181B1647C0008E4863 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 975549161B1647C0008E4863 /* LaunchScreen.xib */; };
 		975549241B1647C1008E4863 /* BusChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 975549231B1647C1008E4863 /* BusChallengeTests.m */; };
+		9755492E1B1647E2008E4863 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9755492D1B1647E2008E4863 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		9755491D1B1647C1008E4863 /* BusChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		975549221B1647C1008E4863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		975549231B1647C1008E4863 /* BusChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusChallengeTests.m; sourceTree = "<group>"; };
+		9755492D1B1647E2008E4863 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9755492E1B1647E2008E4863 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		975548FB1B1647C0008E4863 = {
 			isa = PBXGroup;
 			children = (
+				9755492D1B1647E2008E4863 /* MapKit.framework */,
 				975549061B1647C0008E4863 /* BusChallenge */,
 				975549201B1647C1008E4863 /* BusChallengeTests */,
 				975549051B1647C0008E4863 /* Products */,
