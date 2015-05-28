@@ -16,6 +16,8 @@
 		975549241B1647C1008E4863 /* BusChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 975549231B1647C1008E4863 /* BusChallengeTests.m */; };
 		9755492E1B1647E2008E4863 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9755492D1B1647E2008E4863 /* MapKit.framework */; };
 		975549311B166083008E4863 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 975549301B166083008E4863 /* DetailViewController.m */; };
+		975549341B167533008E4863 /* MyPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 975549331B167533008E4863 /* MyPointAnnotation.m */; };
+		975549371B1676A3008E4863 /* ds.m in Sources */ = {isa = PBXBuildFile; fileRef = 975549361B1676A3008E4863 /* ds.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,10 @@
 		9755492D1B1647E2008E4863 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9755492F1B166083008E4863 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		975549301B166083008E4863 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		975549321B167533008E4863 /* MyPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPointAnnotation.h; sourceTree = "<group>"; };
+		975549331B167533008E4863 /* MyPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPointAnnotation.m; sourceTree = "<group>"; };
+		975549351B1676A3008E4863 /* ds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ds.h; sourceTree = "<group>"; };
+		975549361B1676A3008E4863 /* ds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ds.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,10 @@
 				9755490C1B1647C0008E4863 /* AppDelegate.m */,
 				9755490E1B1647C0008E4863 /* ViewController.h */,
 				9755490F1B1647C0008E4863 /* ViewController.m */,
+				975549321B167533008E4863 /* MyPointAnnotation.h */,
+				975549351B1676A3008E4863 /* ds.h */,
+				975549361B1676A3008E4863 /* ds.m */,
+				975549331B167533008E4863 /* MyPointAnnotation.m */,
 				975549111B1647C0008E4863 /* Main.storyboard */,
 				9755492F1B166083008E4863 /* DetailViewController.h */,
 				975549301B166083008E4863 /* DetailViewController.m */,
@@ -228,9 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				975549371B1676A3008E4863 /* ds.m in Sources */,
 				975549101B1647C0008E4863 /* ViewController.m in Sources */,
 				9755490D1B1647C0008E4863 /* AppDelegate.m in Sources */,
 				9755490A1B1647C0008E4863 /* main.m in Sources */,
+				975549341B167533008E4863 /* MyPointAnnotation.m in Sources */,
 				975549311B166083008E4863 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

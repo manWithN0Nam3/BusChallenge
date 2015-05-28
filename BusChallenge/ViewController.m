@@ -9,10 +9,13 @@
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
 #import "DetailViewController.h"
+#import "MyPointAnnotation.h"
 
 @interface ViewController ()<MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property NSObject <MKAnnotation> *busStopAnnotation;
+@property MKPointAnnotation *metraStop;
+@property MKPointAnnotation *paceStop;
 @property NSArray *busStops;
 
 @end
@@ -53,7 +56,7 @@
         self.busStops = [JSON objectForKey:@"row"];
 
         for (NSDictionary *location in self.busStops) {
-            MKPointAnnotation *annotation = [MKPointAnnotation new];
+            MyPointAnnotation *annotation = [[MyPointAnnotation alloc]initWithDictionary:location];
             annotation.coordinate = CLLocationCoordinate2DMake([[location objectForKey:@"latitude"]floatValue], [[location objectForKey:@"longitude"]floatValue]);
 
             annotation.title = [location objectForKey:@"cta_stop_name"];
@@ -83,14 +86,17 @@
 //
 //
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
-    [self performSegueWithIdentifier:@"c" sender:control];
+
+
+    [self performSegueWithIdentifier:@"c" sender:self];
 
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     DetailViewController *dVc = segue.destinationViewController;
+    MyPointAnnotation *myPoint = self.mapView.selectedAnnotations.firstObject;
+    dVc.dataDictionary = myPoint.dataDictionary;
 
-    dVc.dictionary = self.busStops;
 
 
 

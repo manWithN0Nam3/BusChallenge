@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y4K-0t-pAD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -33,10 +34,10 @@
                                 <exclude reference="xEP-HV-N2e"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Bic-2f-fin"/>
                                 <exclude reference="JIj-OH-X9j"/>
                                 <exclude reference="lPu-oj-B1b"/>
                                 <exclude reference="tAs-gs-VbO"/>
-                                <exclude reference="Bic-2f-fin"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -44,10 +45,10 @@
                                 <include reference="xEP-HV-N2e"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Bic-2f-fin"/>
                                 <include reference="JIj-OH-X9j"/>
                                 <include reference="lPu-oj-B1b"/>
                                 <include reference="tAs-gs-VbO"/>
-                                <include reference="Bic-2f-fin"/>
                             </mask>
                         </variation>
                     </view>
@@ -70,6 +71,7 @@
                         <viewControllerLayoutGuide type="bottom" id="EBe-Ai-aWe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lz8-ii-8by">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bR1-VP-VY1">
@@ -78,7 +80,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="133" y="153" width="134" height="81"/>
+                                    <rect key="frame" x="133" y="90" width="134" height="81"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stops Adress" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMo-nO-LJE">
@@ -87,7 +89,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="155" y="361" width="101" height="21"/>
+                                    <rect key="frame" x="91" y="196" width="101" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pace" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sn2-nW-mXz">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="133" y="390" width="148" height="97"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bus routes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYg-yW-2gy">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="141" y="284" width="81" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -96,16 +116,26 @@
                             <mask key="subviews">
                                 <exclude reference="bR1-VP-VY1"/>
                                 <exclude reference="mMo-nO-LJE"/>
+                                <exclude reference="Sn2-nW-mXz"/>
+                                <exclude reference="WYg-yW-2gy"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="bR1-VP-VY1"/>
                                 <include reference="mMo-nO-LJE"/>
+                                <include reference="Sn2-nW-mXz"/>
+                                <include reference="WYg-yW-2gy"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="1Lg-SI-HGH"/>
+                    <connections>
+                        <outlet property="busRoutesLabel" destination="WYg-yW-2gy" id="c94-5r-K7u"/>
+                        <outlet property="nameLabel" destination="bR1-VP-VY1" id="uvb-Ea-REg"/>
+                        <outlet property="paceLabel" destination="Sn2-nW-mXz" id="NjL-tJ-nHn"/>
+                        <outlet property="stopsAddressLabel" destination="mMo-nO-LJE" id="FF2-QK-Z9Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDP-tF-S7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

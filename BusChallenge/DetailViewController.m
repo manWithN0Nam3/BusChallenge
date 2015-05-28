@@ -9,6 +9,10 @@
 #import "DetailViewController.h"
 
 @interface DetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *stopsAddressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *busRoutesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *paceLabel;
 
 @end
 
@@ -16,22 +20,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+    self.nameLabel.text = [self.dataDictionary objectForKey:@"cta_stop_name"];
+    self.title = self.nameLabel.text;
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+    self.busRoutesLabel.text = [self.dataDictionary objectForKey:@"routes"];
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    self.paceLabel.text = [self.dataDictionary objectForKey:@"inter_modal"];
+    self.stopsAddressLabel.text = [self.dataDictionary objectForKey:@"stop_id"];
+    NSLog(@"name label: %@", self.paceLabel.text);
 }
-*/
 
 @end
